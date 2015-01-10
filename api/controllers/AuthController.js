@@ -52,7 +52,7 @@ module.exports = {
                 res.json({
                     created_at: user.createdAt,
                     email: user.email,
-                    fist_name: user.firstname,
+                    first_name: user.fistname,
                     id: user.id,
                     last_name: user.lastname,
                     full_name: user.name,
@@ -67,6 +67,7 @@ module.exports = {
     logout : function(req, res) {
         req.logout();
 //        res.redirect('//app.mobilegiftcard.com/');
+        var conf = sails.config;
         res.redirect(conf.apiRoot);
     },
 
